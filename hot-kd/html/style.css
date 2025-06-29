@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    background: transparent;
+}
+
+.kd-container {
+    position: fixed;
+    top: 60%;
+    right: 20px;
+    transform: translateY(-50%);
+    background: #505050;
+    border-radius: 6px;
+    padding: 8px;
+    min-width: 120px;
+    transition: all 0.3s ease;
+    animation: slideInRight 0.5s ease-out;
+}
+
+.kd-container:hover {
+    transform: translateY(-48px);
+}
+
+.kd-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #707070;
+}
+
+.logo {
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+    border-radius: 3px;
+    object-fit: cover;
+}
+
+.kd-title {
+    color: #b0b0b0;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.kd-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px 5px;
+    background: transparent;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+}
+
+.stat-item:hover {
+    background: transparent;
+    transform: translateX(3px);
+}
+
+.kd-ratio {
+    background: transparent;
+    border-left: 2px solid #888888;
+}
+
+.kills {
+    background: transparent;
+    border-left: 2px solid #888888;
+}
+
+.deaths {
+    background: transparent;
+    border-left: 2px solid #888888;
+}
+
+.stat-label {
+    color: #a0a0a0;
+    font-size: 10px;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.stat-icon {
+    width: 12px;
+    height: 12px;
+    margin-right: 4px;
+}
+
+.stat-value {
+    color: #c0c0c0;
+    font-size: 12px;
+    font-weight: bold;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+    min-width: 30px;
+    text-align: right;
+    background: #3c3c3c;
+    padding: 2px 5px;
+    border-radius: 2px;
+}
+
+.kd-ratio .stat-value {
+    color: #c0c0c0;
+}
+
+.kills .stat-value {
+    color: #c0c0c0;
+}
+
+.deaths .stat-value {
+    color: #c0c0c0;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(-50%) translateX(100px);
+    pointer-events: none;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateY(-50%) translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(-50%) translateX(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.stat-item.updated {
+    animation: pulse 0.6s ease-in-out;
+}
+
+
+@media (max-width: 768px) {
+    .kd-container {
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        min-width: 180px;
+        padding: 12px;
+    }
+    
+    .logo {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .kd-title {
+        font-size: 14px;
+    }
+    
+    .stat-value {
+        font-size: 14px;
+    }
+}
+
+
+.kd-container.high-kd {
+    border-color: #ffffff;
+}
+
+.kd-container.high-kd .kd-ratio .stat-value {
+    color: #ffffff;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K/D Display</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="kd-container" class="kd-container hidden">
+        <div class="kd-header">
+            <img src="logo.png" alt="Logo" class="logo" id="logo">
+            <div class="kd-title">K/D Stats</div>
+        </div>
+        
+        <div class="kd-stats">
+            <div class="stat-item kd-ratio">
+                <span class="stat-label">KD:</span>
+                <span class="stat-value" id="kd-ratio">0.00</span>
+            </div>
+            
+            <div class="stat-item kills">
+                <svg class="stat-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="40" fill="none" stroke="#a0a0a0" stroke-width="3"/>
+                    <circle cx="50" cy="50" r="25" fill="none" stroke="#a0a0a0" stroke-width="2"/>
+                    <circle cx="50" cy="50" r="10" fill="none" stroke="#a0a0a0" stroke-width="2"/>
+                    <line x1="50" y1="5" x2="50" y2="25" stroke="#a0a0a0" stroke-width="2"/>
+                    <line x1="50" y1="75" x2="50" y2="95" stroke="#a0a0a0" stroke-width="2"/>
+                    <line x1="5" y1="50" x2="25" y2="50" stroke="#a0a0a0" stroke-width="2"/>
+                    <line x1="75" y1="50" x2="95" y2="50" stroke="#a0a0a0" stroke-width="2"/>
+                    <circle cx="50" cy="50" r="2" fill="#a0a0a0"/>
+                </svg>
+                <span class="stat-value" id="kills">0</span>
+            </div>
+            
+            <div class="stat-item deaths">
+                <svg class="stat-icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="#a0a0a0" d="M255.997 16.004c-120 0-239.997 60-239.997 149.998C16 226.002 61 256 61 316c0 45-15 45-15 75 0 14.998 48.01 32.002 89.998 44.998v60h239.997v-60s90.567-27.957 90-45c-.933-27.947-15-30-15-74.998 0-30 45.642-91.42 44.998-149.998 0-90-119.998-149.998-239.996-149.998zm-90 179.997c33.137 0 60 26.864 60 60 0 33.136-26.863 60-60 60C132.863 316 106 289.136 106 256c0-33.136 26.862-60 59.998-60zm179.998 0c33.136 0 60 26.864 60 60 0 33.136-26.864 60-60 60-33.136 0-60-26.864-60-60 0-33.136 26.864-60 60-60zm-89.998 105c15 0 45 60 45 75 0 29.998 0 29.998-15 29.998h-60c-15 0-15 0-15-30 0-15 30-74.998 45-74.998z"/>
+                </svg>
+                <span class="stat-value" id="deaths">0</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
