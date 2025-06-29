@@ -3,7 +3,7 @@
 Track kills, deaths, and calculate real-time KD ratios for your players.  
 Perfect for PvP-focused servers, this system is optimized and leaderboard-ready.
 
-![KD System Banner](https://r.resimlink.com/9uY1i.png)
+![KD System Banner](https://r.resimlink.com/CPOzIZc90k8F.png)
 
 ---
 
